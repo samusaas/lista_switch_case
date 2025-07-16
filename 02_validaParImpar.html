@@ -6,11 +6,13 @@
     */
 
     //ENTRADA
-
-    
+     let num = Number(prompt(`Informe um número inteiro`))
     //PROCESSAMENTO
-
-    
+     switch (num % 2){
+        case 0: num = `É par` 
+        break;
+        default: num = `É impar`
+     }    
     //SAÍDA
-
+     document.write(num);
 </script>

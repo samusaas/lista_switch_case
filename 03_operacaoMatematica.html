@@ -2,18 +2,106 @@
 <script>
     /*
     PROBLEMA: CÁLCULO ENTRE DOIS NÚMEROS
-    Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+    Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar.
+     O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
     - par ou ímpar;
     - positivo ou negativo;
     - inteiro ou decimal.
     */
 
     //ENTRADA
-
-
+    let num1 = Number(prompt(`Informe o primeiro número`));
+    let num2 = Number(prompt(`Informe um segundo número`));
+    let op = prompt(`Informe a operação que deseja usar`);
     //PROCESSAMENTO
+    let resultado, parImpar, posNeg, intDec;
+    switch (op) {
+        case "+":
+            resultado = num1 + num2;
+            switch (resultado % 2) {
+                case 0: parImpar = `par`;
+                    break;
+                default: parImpar = `impar`
+            }
+            switch (resultado > 0) {
+                case true: posNeg = `Positivo`
+                    break;
+                case false: posNeg = `Negativo`
+                    break;
+            }
 
-    
+            switch (Number.isInteger(resultado)) {
+                case true: intDec = `Inteiro`
+                    break;
+                case false: intDec = `Decimal`
+                    break;
+            }
+            break;
+        case "-":
+            resultado = num1 - num2;
+            switch (resultado % 2) {
+                case 0: parImpar = `par`;
+                    break;
+                default: parImpar = `impar`
+            }
+            switch (resultado > 0) {
+                case true: posNeg = `Positivo`
+                    break;
+                case false: posNeg = `Negativo`
+                    break;
+            }
+
+            switch (Number.isInteger(resultado)) {
+                case true: intDec = `Inteiro`
+                    break;
+                case false: intDec = `Decimal`
+                    break;
+            }
+            break;
+        case "*":
+            resultado = num1 * num2;
+            switch (resultado % 2) {
+                case 0: parImpar = `par`;
+                    break;
+                default: parImpar = `impar`
+            }
+            switch (resultado > 0) {
+                case true: posNeg = `Positivo`
+                    break;
+                case false: posNeg = `Negativo`
+                    break;
+            }
+
+            switch (Number.isInteger(resultado)) {
+                case true: intDec = `Inteiro`
+                    break;
+                case false: intDec = `Decimal`
+                    break;
+            }
+            break;
+        case "/":
+            resultado = num1 / num2;
+            switch (resultado % 2) {
+                case 0: parImpar = `par`;
+                    break;
+                default: parImpar = `impar`
+            }
+            switch (resultado > 0) {
+                case true: posNeg = `Positivo`
+                    break;
+                case false: posNeg = `Negativo`
+                    break;
+            }
+
+            switch (Number.isInteger(resultado)) {
+                case true: intDec = `Inteiro`
+                    break;
+                case false: intDec = `Decimal`
+                    break;
+            }
+            break;
+        default: alert(`Número inválido`);
+    }
     //SAÍDA
-
+    document.write(`O resultado ficou: ${resultado}, e ele é: ${parImpar}, ${posNeg} e ${intDec}.`);
 </script>

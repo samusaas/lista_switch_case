@@ -13,11 +13,18 @@
     */
 
     //ENTRADA
-    
-    
+    let turno = prompt(`Informe o turno em que você estuda(M-matutino, V-vespertino ou N-noturno)`);
     //PROCESSAMENTO
-
-    
+    let mensagem;
+    switch (turno.toUpperCase()) {
+        case `M`: mensagem = `Bom Dia!`
+         break;
+        case `V`: mensagem =  `Boa Tarde!`
+         break;
+        case `N`: mensagem = `Boa Noite!`
+         break;
+         default: mensagem = `Valor Inválido!`
+    }
     //SAÍDA
-
+     document.write(mensagem);
 </script>
