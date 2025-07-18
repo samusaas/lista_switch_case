@@ -7,11 +7,69 @@
     */
 
     //ENTRADA
-
-    
+    let hemisferio = prompt(`Informe o hemisfério em que voĉe está`);
+    let mes = Number(prompt(`Informe o mês atual (em números)`))
     //PROCESSAMENTO
+    let mensagem;
+    switch (hemisferio.toLowerCase()) {
+        case `norte`:
+            switch (mes) {
+                case 12:
+                case 1:
+                case 2:
+                    mensagem = `É inverno`;
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    mensagem = `É primavera;`
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    mensagem = `É verão`;
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    mensagem = (`É Outono`);
+                    break;
+                default:
+                    alert(`Mês inválido.`);
+            }
+            break;
 
+        case "sul":
+            switch (mes) {
+                case 12:
+                case 1:
+                case 2:
+                    mensagem =(`É Verão`);
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    mensagem = `É Outono`;
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    mensagem = `É Inverno`;
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    mensagem = `É Primavera`
+                    break;
+                default:
+                    alert(`Mês inválido.`);
+            }
+            break;
+
+        default:
+            alert(`Hemisfério inválido. Use 'norte' ou 'sul'.`);
+    }
 
     //SAÍDA
-
+      document.write(mensagem);
 </script>

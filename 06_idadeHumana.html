@@ -10,11 +10,19 @@
     */
 
     // ENTRADA
-
-    
+    let idade = Number(prompt(`Informe a idade do seu cão`));
+    let porte = prompt(`Informe o porte do seu cão (P-pequeno | M-médio | G-grande)`)
     // PROCESSAMENTO
+    switch (porte.toUpperCase()) {
+        case "P": idade = idade * 5;
+            break;
+        case "M": idade = idade * 6;
+            break;
+        case "G": idade = idade * 7;
+            break;
+        default: alert(`Informe um porte válido`);
+    }
 
-    
     // SAÍDA
-
+    document.write(`A idade do seu cão é de ${idade}`)
 </script>
